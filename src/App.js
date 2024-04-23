@@ -36,6 +36,12 @@ function App() {
     }
   };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
   return (
     <div className="App">
       <h1>Weather Dashboard</h1>
@@ -45,13 +51,16 @@ function App() {
           placeholder="Enter city name"
           value={city}
           onChange={(e) => setCity(e.target.value)}
+          onKeyPress={handleKeyPress} // Add event listener for "Enter" key press
         />
         <button onClick={handleSearch}>Search</button>
       </div>
       {error && <div className="error">{error}</div>}
       {weatherData && (
         <div className="weather-details">
-          <h2>{weatherData.name}, {weatherData.sys.country}</h2>
+          <h2>
+            {weatherData.name}, {weatherData.sys.country}
+          </h2>
           <p>Temperature: {weatherData.main.temp} °C</p>
           <p>Humidity: {weatherData.main.humidity}%</p>
           <p>Wind Speed: {weatherData.wind.speed} m/s</p>
