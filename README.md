@@ -11,5 +11,3 @@ npm install
 npm start
 5. Access the App
 Open a web browser and navigate to the specified address (usually http://localhost:3000).
-
-
