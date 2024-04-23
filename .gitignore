@@ -5,12 +5,9 @@
 /.pnp
 .pnp.js
 
-<<<<<<< HEAD
-=======
 # json files
 package-lock.json
 
->>>>>>> 3589660f6f2a8d717f9d5c006e4222e4eed50f6b
 # testing
 /coverage
 
