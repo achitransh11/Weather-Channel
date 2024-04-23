@@ -51,7 +51,7 @@ function App() {
           placeholder="Enter city name"
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          onKeyPress={handleKeyPress} // Add event listener for "Enter" key press
+          onKeyPress={handleKeyPress}
         />
         <button onClick={handleSearch}>Search</button>
       </div>
